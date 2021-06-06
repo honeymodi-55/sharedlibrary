@@ -1,9 +1,13 @@
 def call(String access_key, String secret_key){
 
-    script {
-        sh """
-            echo ${access_key}
-        """
+    node {
+        stage("Hello World") {
+            script {
+                sh """
+                    echo ${access_key}
+                """
+            }
+        }
     }
 
     pipeline {
