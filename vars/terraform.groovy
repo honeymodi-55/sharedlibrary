@@ -1,10 +1,10 @@
-def call(String access_key, String secret_key){
+def call(String access_key,String secret_key){
 
     node {
         stage("Hello World") {
             script {
                 sh """
-                    echo ${access_key}
+                    echo thid is access-key ${access_key}
                 """
             }
         }
