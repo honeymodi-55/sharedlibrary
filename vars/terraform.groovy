@@ -3,9 +3,7 @@ def call(String access_key,String secret_key){
     node {
         stage("Hello World") {
             script {
-                sh """
-                    echo thid is access-key ${access_key}
-                """
+                echo "${access_key}"
             }
         }
     }
