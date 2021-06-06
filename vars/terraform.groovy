@@ -1,4 +1,10 @@
 def call(Map config = [:]){
+
+    def pipelineParams= [:]
+    body.resolveStrategy = Closure.DELEGATE_FIRST
+    body.delegate = pipelineParams
+    body()
+    
     pipeline {
     agent any 
     stages {
